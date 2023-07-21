@@ -1,0 +1,114 @@
+﻿@model LeagueMaster.Models.Estadisticas_Partidos
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Estadisticas_Partidos</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Equipo_Local" class="control-label"></label>
+                <input asp-for="Equipo_Local" class="form-control" />
+                <span asp-validation-for="Equipo_Local" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipo_Visitante" class="control-label"></label>
+                <input asp-for="Equipo_Visitante" class="form-control" />
+                <span asp-validation-for="Equipo_Visitante" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Puntos_Local" class="control-label"></label>
+                <input asp-for="Puntos_Local" class="form-control" />
+                <span asp-validation-for="Puntos_Local" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Puntos_Visitantes" class="control-label"></label>
+                <input asp-for="Puntos_Visitantes" class="form-control" />
+                <span asp-validation-for="Puntos_Visitantes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Canastas_3" class="control-label"></label>
+                <input asp-for="Canastas_3" class="form-control" />
+                <span asp-validation-for="Canastas_3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Canastas_2" class="control-label"></label>
+                <input asp-for="Canastas_2" class="form-control" />
+                <span asp-validation-for="Canastas_2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Canastas_1" class="control-label"></label>
+                <input asp-for="Canastas_1" class="form-control" />
+                <span asp-validation-for="Canastas_1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Total_Faltas" class="control-label"></label>
+                <input asp-for="Total_Faltas" class="form-control" />
+                <span asp-validation-for="Total_Faltas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fecha" class="control-label"></label>
+                <input asp-for="Fecha" class="form-control" />
+                <span asp-validation-for="Fecha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hora" class="control-label"></label>
+                <input asp-for="Hora" class="form-control" />
+                <span asp-validation-for="Hora" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Estadio" class="control-label"></label>
+                <input asp-for="Estadio" class="form-control" />
+                <span asp-validation-for="Estadio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Jornada" class="control-label"></label>
+                <input asp-for="Jornada" class="form-control" />
+                <span asp-validation-for="Jornada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Competicion" class="control-label"></label>
+                <input asp-for="Competicion" class="form-control" />
+                <span asp-validation-for="Competicion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Notas_Adicionales" class="control-label"></label>
+                <input asp-for="Notas_Adicionales" class="form-control" />
+                <span asp-validation-for="Notas_Adicionales" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Arbitro_1" class="control-label"></label>
+                <input asp-for="Arbitro_1" class="form-control" />
+                <span asp-validation-for="Arbitro_1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Arbitro_2" class="control-label"></label>
+                <input asp-for="Arbitro_2" class="form-control" />
+                <span asp-validation-for="Arbitro_2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mesa_principal" class="control-label"></label>
+                <input asp-for="Mesa_principal" class="form-control" />
+                <span asp-validation-for="Mesa_principal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

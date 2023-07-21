@@ -1,0 +1,138 @@
+﻿@model LeagueMaster.Models.Estadisticas_Jugadores
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Estadisticas_Jugadores</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id_Jugador" class="control-label"></label>
+                <input asp-for="Id_Jugador" class="form-control" />
+                <span asp-validation-for="Id_Jugador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nombre_Jugador" class="control-label"></label>
+                <input asp-for="Nombre_Jugador" class="form-control" />
+                <span asp-validation-for="Nombre_Jugador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Minutos_Jugados" class="control-label"></label>
+                <input asp-for="Minutos_Jugados" class="form-control" />
+                <span asp-validation-for="Minutos_Jugados" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tiros_Campo_Intentados" class="control-label"></label>
+                <input asp-for="Tiros_Campo_Intentados" class="form-control" />
+                <span asp-validation-for="Tiros_Campo_Intentados" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tiros_Campo_Exitosos" class="control-label"></label>
+                <input asp-for="Tiros_Campo_Exitosos" class="form-control" />
+                <span asp-validation-for="Tiros_Campo_Exitosos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Porcentaje_Tiros_Campo" class="control-label"></label>
+                <input asp-for="Porcentaje_Tiros_Campo" class="form-control" />
+                <span asp-validation-for="Porcentaje_Tiros_Campo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tiros_3P_Intentados" class="control-label"></label>
+                <input asp-for="Tiros_3P_Intentados" class="form-control" />
+                <span asp-validation-for="Tiros_3P_Intentados" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tiros_3P_Exitosos" class="control-label"></label>
+                <input asp-for="Tiros_3P_Exitosos" class="form-control" />
+                <span asp-validation-for="Tiros_3P_Exitosos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Porcentaje_Tiros_3P" class="control-label"></label>
+                <input asp-for="Porcentaje_Tiros_3P" class="form-control" />
+                <span asp-validation-for="Porcentaje_Tiros_3P" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tiros_2P_Intentados" class="control-label"></label>
+                <input asp-for="Tiros_2P_Intentados" class="form-control" />
+                <span asp-validation-for="Tiros_2P_Intentados" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tiros_2P_Exitosos" class="control-label"></label>
+                <input asp-for="Tiros_2P_Exitosos" class="form-control" />
+                <span asp-validation-for="Tiros_2P_Exitosos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Porcentaje_Tiros_2P" class="control-label"></label>
+                <input asp-for="Porcentaje_Tiros_2P" class="form-control" />
+                <span asp-validation-for="Porcentaje_Tiros_2P" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tiros_Libres_Intentados" class="control-label"></label>
+                <input asp-for="Tiros_Libres_Intentados" class="form-control" />
+                <span asp-validation-for="Tiros_Libres_Intentados" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tiros_Libres_Exitosos" class="control-label"></label>
+                <input asp-for="Tiros_Libres_Exitosos" class="form-control" />
+                <span asp-validation-for="Tiros_Libres_Exitosos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Porcentaje_Tiros_Libres" class="control-label"></label>
+                <input asp-for="Porcentaje_Tiros_Libres" class="form-control" />
+                <span asp-validation-for="Porcentaje_Tiros_Libres" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rebotes_Ofensivos" class="control-label"></label>
+                <input asp-for="Rebotes_Ofensivos" class="form-control" />
+                <span asp-validation-for="Rebotes_Ofensivos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rebotes_Densivos" class="control-label"></label>
+                <input asp-for="Rebotes_Densivos" class="form-control" />
+                <span asp-validation-for="Rebotes_Densivos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Total_Rebotes" class="control-label"></label>
+                <input asp-for="Total_Rebotes" class="form-control" />
+                <span asp-validation-for="Total_Rebotes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Asistencias" class="control-label"></label>
+                <input asp-for="Asistencias" class="form-control" />
+                <span asp-validation-for="Asistencias" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Robos" class="control-label"></label>
+                <input asp-for="Robos" class="form-control" />
+                <span asp-validation-for="Robos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bloqueos" class="control-label"></label>
+                <input asp-for="Bloqueos" class="form-control" />
+                <span asp-validation-for="Bloqueos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Perdidas" class="control-label"></label>
+                <input asp-for="Perdidas" class="form-control" />
+                <span asp-validation-for="Perdidas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

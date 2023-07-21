@@ -1,0 +1,131 @@
+﻿@model IEnumerable<LeagueMaster.Models.Estadisticas_Partidos>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+    <a asp-action="Create">Crear Nueva Estadistica de Partidos</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipo_Local)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipo_Visitante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Puntos_Local)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Puntos_Visitantes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Canastas_3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Canastas_2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Canastas_1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total_Faltas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hora)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estadio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jornada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Competicion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Notas_Adicionales)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Arbitro_1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Arbitro_2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mesa_principal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Equipo_Local)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Equipo_Visitante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Puntos_Local)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Puntos_Visitantes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Canastas_3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Canastas_2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Canastas_1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total_Faltas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hora)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estadio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Jornada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Competicion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Notas_Adicionales)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Arbitro_1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Arbitro_2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mesa_principal)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

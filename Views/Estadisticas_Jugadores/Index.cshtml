@@ -1,0 +1,234 @@
+﻿@model IEnumerable<LeagueMaster.Models.Estadisticas_Jugadores>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+    .table {
+        width: 100%;
+        margin-bottom: 1rem;
+        color: #212529;
+        background-color: #fff;
+        border-collapse: collapse;
+    }
+
+        .table th,
+        .table td {
+            padding: 0.75rem;
+            vertical-align: top;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .table th {
+            font-weight: bold;
+            text-align: inherit;
+            background-color: #f8f9fa;
+        }
+
+        .table td {
+            text-align: inherit;
+        }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+        .btn-primary:hover {
+            background-color: #0069d9;
+        }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+
+    .btn-danger {
+        background-color: #dc3545;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
+</style>
+
+<p>
+    <a asp-action="btn btn-primary">Crear Nueva Estadistica de Jugador</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id_Jugador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre_Jugador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Minutos_Jugados)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tiros_Campo_Intentados)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tiros_Campo_Exitosos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Porcentaje_Tiros_Campo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tiros_3P_Intentados)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tiros_3P_Exitosos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Porcentaje_Tiros_3P)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tiros_2P_Intentados)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tiros_2P_Exitosos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Porcentaje_Tiros_2P)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tiros_Libres_Intentados)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tiros_Libres_Exitosos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Porcentaje_Tiros_Libres)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rebotes_Ofensivos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rebotes_Densivos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total_Rebotes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asistencias)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Robos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bloqueos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Perdidas)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id_Jugador)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre_Jugador)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Minutos_Jugados)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tiros_Campo_Intentados)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tiros_Campo_Exitosos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Porcentaje_Tiros_Campo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tiros_3P_Intentados)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tiros_3P_Exitosos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Porcentaje_Tiros_3P)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tiros_2P_Intentados)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tiros_2P_Exitosos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Porcentaje_Tiros_2P)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tiros_Libres_Intentados)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tiros_Libres_Exitosos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Porcentaje_Tiros_Libres)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rebotes_Ofensivos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rebotes_Densivos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Total_Rebotes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Asistencias)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Robos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bloqueos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Perdidas)
+                </td>
+                <td>
+                    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a class="btn btn-secondary" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

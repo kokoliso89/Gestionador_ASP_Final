@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Pagina Principal";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenido Al Gestionador De Liga Mas Efectivo</h1>
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="./lib/jquery-validation-unobtrusive/Logo Marca Personal Masculino con Iniciales y Nombre Profesional Blanco y Negro.jpg" style="max-width: 100%; max-height: 100%;">
+    </div>
+<p class="lead">League Master es una plataforma para los amantes del baloncesto. Aquí podrás encontrar información sobre equipos, jugadores, partidos y estadísticas. Regístrate para acceder a todas las funcionalidades de la plataforma.</p>
+<style>
+  .galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .galeria img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .galeria img:hover {
+    transform: scale(1.1) rotate(5deg);
+  }
+
+  
+    .galeria {
+      gap: 20px;
+    }
+
+    .galeria img {
+      width: calc(33.33% - 20px);
+      height: 200px;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.1) rotate(10deg);
+    }
+  
+</style>
+
+<div class="galeria">
+  <img src="./lib/img1.jpeg" alt="Imagen 1">
+  <img src="./lib/img2.jpeg" alt="Imagen 2">
+  <img src="./lib/img3.jpeg" alt="Imagen 3">
+</div>
+    <li class="nav-item">
+        <a class="btn btn-primary" asp-area="Identity" asp-page="/Account/Login">Login</a>
+    </li>
+</div>
